@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /toilaquanly
+Disallow: /quanlycapcao
+Disallow: /cpanel
+Disallow: /dangnhap
+Disallow: /login
+
+Sitemap: https://hachinet.com/sitemap.xml
+Sitemap: https://www.hachinet.com/sitemap.xml
