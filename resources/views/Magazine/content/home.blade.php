@@ -1,8 +1,8 @@
 @extends('Magazine.layouts.default')
 @section('content')
-<div class="container-fluid">
+<div class="container">
     <div class="row">
-        <div class="col-12">
+        <div class="col-12 mt-3">
             <div class="row">
                 @foreach ($top as $key => $post)
                     @if ($key > 5)

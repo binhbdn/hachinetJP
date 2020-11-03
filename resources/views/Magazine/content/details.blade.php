@@ -1,7 +1,7 @@
 @extends('Magazine.layouts.d_default')
 @section('content')
-<div class="container-fluid">
-    <div class="row page-titles">
+<div class="container">
+    <div class="row page-titles mt-3 pb-0">
         <div class="col-md-12 col-12 align-self-center">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item font-medium"><a href="{{route('news')}}" class="text-warning">{{trans('messages.top_magazine')}}</a></li>
@@ -45,15 +45,20 @@
                                 @endphp
                                 
                             </div>
-                            <div class="form-group mt-3 text-right">
+                            {{-- <div class="form-group mt-3 text-right">
                                 <div class="fb-like" data-href="{{route('magazine.show', $posts->postSlug)}}" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="col-12 col-md-4 border-left">
                             @include('Magazine.layouts.subscribe')
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="card">
+                <div class="col-md-12">
+                    <div class="fb-comments" data-href="{{route('magazine.show', $posts->postSlug)}}" data-numposts="5" data-width="100%" ></div>
+               </div>
             </div>
         </div>
     </div>

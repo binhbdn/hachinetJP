@@ -191,3 +191,8 @@
     background-color: #ffbc34;
     border-color: #ffbc34;
 }
+@media only screen and (min-width: 1365px) {
+    .responsive-mobile {
+        display: none !important;
+    }
+}

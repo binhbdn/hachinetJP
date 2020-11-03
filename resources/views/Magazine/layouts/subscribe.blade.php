@@ -2,7 +2,7 @@
     <div class="card-header bg-warning border-radius-0">
         <h4 class="card-title mb-0">{{trans('messages.archive')}}</h4>
     </div>
-    <div class="card-body pr-0 pl-0">
+    <div class="pr-0 pl-0">
         <ul id="list__archive" class="list__archive pl-0">
             @foreach ($date as $d)
             <li @if (!$loop->last) class="border-bottom" @endif>
@@ -17,7 +17,7 @@
     <div class="card-header bg-warning border-radius-0">
         <h4 class="card-title mb-0">{{trans('messages.newsletter')}}</h4>
     </div>
-    <div class="card-body p-0 pt-3">
+    <div class="card p-0 pt-3">
         <div class="form-group mb-2">
             <label for="">{{trans('messages.name')}}</label>
             <input type="text" name="name_subscribe" id="name_subscribe" class="form-control">

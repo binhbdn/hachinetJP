@@ -25,7 +25,7 @@
                         <a class="dropdown-item" target="_blank" href="{{url('profile/Hachinet_Profile_EN.pdf')}}"><i class="flag-icon flag-icon-us"></i> {{trans('messages.profile')}}</a> 
                     </div>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown responsive-mobile">
                     <span class="nav-link dropdown-toggle  mdi-24px text-body waves-effect waves-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 
                         <i class="mdi mdi-menu text-body mdi-24px"></i>
                     </span>
