@@ -2,8 +2,8 @@
     <div class="container">
         <nav class="navbar">
             <a class="navbar-brand logo_h"  href="{{ url('/') }}"><img src="{{asset('static/img/logo-hachinet-alt2.png')}}" alt="WEB制作・業務システム開発・ベトナムソフトウウェアアウトソーーシング "></a>
-            <p class="p">{{trans('messages.tt')}}</p>
-            <!-- <marquee style="display:none;" >{{trans('messages.tt')}}</marquee> -->
+            <marquee>{{trans('messages.tt')}}</marquee>
+            <!-- <p class="p">{{trans('messages.tt')}}</p> -->
             <div class="navbar-menu">
                 <ul>
                     <li class="phone"><a href="tel:+842462900388" class="span-1 text-body"><i class="fa fa-phone"></i>&nbsp;(+84) 24-6290-0388</a></li>
@@ -16,7 +16,6 @@
         </nav>
     </div>
 </header>
-    
         <nav class="nav">
             <div class="container">
                 <a class="navbar-brand logo_h"  href="{{ url('/') }}"><img class="img-logo" src="{{asset('static/img/logo-hachinet-alt2.png')}}" alt="WEB制作・業務システム開発・ベトナムソフトウウェアアウトソーーシング "></a>
