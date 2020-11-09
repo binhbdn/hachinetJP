@@ -40,7 +40,12 @@
                                 @php
                                     $arrTags = explode(',', $posts->postTags);
                                     foreach ($arrTags as $val) {
-                                        echo '<a href="https://hachinet.com/blogs/search?s='.$val.'" title="'.$val.'" class="badge text-black mr-1 p-2 badge-pill badge-warning">'.$val.'</a>';
+                                        if (Session::get('locale') == 'jp'){ 
+                                            echo '<a href="https://hachinet.jp/blogs/search?s='.$val.'" title="'.$val.'" class="badge text-black mr-1 p-2 badge-pill tag-news badge-warning">'.$val.'</a>';
+                                        }
+                                        else {
+                                            echo '<a href="https://hachinet.com/blogs/search?s='.$val.'" title="'.$val.'" class="badge text-black mr-1 p-2 badge-pill tag-news badge-warning">'.$val.'</a>';
+                                        }
                                     }
                                 @endphp
                                 
@@ -50,6 +55,26 @@
                             </div> --}}
                         </div>
                         <div class="col-12 col-md-4 border-left">
+                            <div class="card mb-0">
+                                <div class="card-header bg-warning border-radius-0">
+                                    <h4 class="card-title mb-0">{{trans('messages.new_post')}}</h4>
+                                </div>
+                                <div class="pr-0 pl-0 mb-2 mt-2">
+                                    @foreach ($top as $item)
+                                        <div class="mb-1 mt-1 d-flex box-news__hot">
+                                            <div class="col-md-5 box__thumbnail position-relative h-auto">
+                                                <a href="{{route('magazine.show', $item->postSlug)}}" title="{{$item->postTitle}}" style="background-image: url('{{asset('upload/'.$item->postThumb)}}')"></a>
+                                            </div>
+                                            <div class="col-md-7">
+                                                <a class="el-2 text-body" href="{{route('magazine.show', $item->postSlug)}}" class="font-weight-bold">
+                                                    {{$item->postTitle}}
+                                                </a>
+                                                <p class="font-13"><i class="mdi mdi-calendar-clock"></i>&nbsp;{{$item->createdAt}}</p>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
                             @include('Magazine.layouts.subscribe')
                         </div>
                     </div>

@@ -49,7 +49,20 @@ class MagazineController extends Controller
     		} else {
     			$topNews[$k]->createdAt = date('Y-m-d', (int)$v->createdAt);
     		}
-    	}
+        }
+        $dataTags = $this->magazine->getTagsLink($lang);
+        foreach ($data as $key => $val) {
+            if ($lang == 'jp') {
+                $data[$key]->createdAt = date('Y年m月d日', (int)$val->createdAt);
+            } else {
+                $data[$key]->createdAt = date('Y-m-d', (int)$val->createdAt);
+            }
+            foreach ($dataTags as $tags) {
+                if ($tags->keyTags) {
+                    $data[$key]->postContent = $this->help->updateTagsLink($tags->keyTags, $tags->tagsLink, $data[$key]->postContent);
+                }
+            }
+        }
         for ($i = 0; $i < 12; $i++) {
             $date[] = array(
                 'date'  =>  date("F Y", strtotime("-".$i." month")),
@@ -57,6 +70,7 @@ class MagazineController extends Controller
             );
         }
         $duplicate = array_merge($data);
+        // dd($duplicate);
         return view('Magazine.content.home', [
             'top' => $topNews,
             'posts' =>  $duplicate,
@@ -105,6 +119,14 @@ class MagazineController extends Controller
                 }
             }
         }
+        $topNews = $this->magazine->getTopNews($lang);
+        foreach ($topNews as $k => $v) {
+    		if ($lang == 'jp') {
+    			$topNews[$k]->createdAt = date('Y年m月d日', (int)$v->createdAt);
+    		} else {
+    			$topNews[$k]->createdAt = date('Y-m-d', (int)$v->createdAt);
+    		}
+        }
         for ($i = 0; $i < 12; $i++) {
             $date[] = array(
                 'date'  =>  date("F Y", strtotime("-".$i." month")),
@@ -114,6 +136,8 @@ class MagazineController extends Controller
         return view('Magazine.content.details', [
             'posts' =>  $data[0],
             'date'  =>  $date,
+            'top' => $topNews
+            
         ]);
     }
 
