@@ -68,6 +68,19 @@
                                             </div>
                                         </div>
                                         <div class="col-md-8 col-12 col-sm-6">
+                                            <div class="form-group mb-1 text-left tags-news pl-3">
+                                                @php
+                                                    $arrTags = explode(',', $post->postTags);
+                                                    foreach ($arrTags as $val) {
+                                                        if (Session::get('locale') == 'jp'){ 
+                                                            echo '<a href="https://hachinet.jp/blogs/search?s='.$val.'" title="'.$val.'" class="badge text-black mr-1 p-2 badge-pill tag-news badge-warning">'.$val.'</a>';
+                                                        }
+                                                        else {
+                                                            echo '<a href="https://hachinet.com/blogs/search?s='.$val.'" title="'.$val.'" class="badge text-black mr-1 p-2 badge-pill tag-news badge-warning">'.$val.'</a>';
+                                                        }   
+                                                    }
+                                                @endphp 
+                                            </div>
                                             <h3 class="mb-0 title_news w-100 pl-3 mb-1">
                                                 <a href="{{route('magazine.show', $post->postSlug)}}" title="{{$post->postTitle}}" class="font-weight-bold text-body a-title__list">
                                                     {{$post->postTitle}}
