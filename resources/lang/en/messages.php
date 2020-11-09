@@ -15,6 +15,7 @@
 		'services_providing'	=>	'Services Providing',
 		'news'	=>	'News',
 		'tt' => '',
+		'new_post' =>  'New Posts',
 		'contact' => 'Contact Us',
 		'angular' => 'Front-End Outsource Development',
 		'human_resources' => 'Human Resources',

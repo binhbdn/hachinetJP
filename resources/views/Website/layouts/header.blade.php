@@ -6,7 +6,7 @@
             <!-- <p class="p">{{trans('messages.tt')}}</p> -->
             <div class="navbar-menu">
                 <ul>
-                    <li class="phone"><a href="tel:+842462900388" class="span-1 text-body"><i class="fa fa-phone"></i>&nbsp;(+84) 24-6290-0388</a></li>
+                    <li><a href="tel:+842462900388" class="span-1 text-body"><i class="fa fa-phone"></i>&nbsp;(+84) 24-6290-0388</a></li>
                     <li class="li"><a href="{{route('contact')}}">{{trans('messages.contact')}}</a></li>
                     <li><a href="{{ url('language/vn') }}"><img class="icon_language" alt="Hachinet Vietnamese" src="{{ asset('static/img/flags/VietNam.png') }}"></a></li>
                     <li><a href="{{ url('language/jp') }}"><img class="icon_language" alt="Hachinet Japanese" src="{{ asset('static/img/flags/Japan.png') }}"></a></li>
@@ -60,4 +60,3 @@
             </div>  
         </nav>
     <!-- Nav End -->
-
