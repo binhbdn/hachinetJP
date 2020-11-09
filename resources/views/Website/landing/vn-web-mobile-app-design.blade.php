@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="landing/vn-web-app-design/css/style.css">
 </head>
 
-<body data-spy="scroll">
+<body class = "translator-vn" data-spy="scroll"></body>
     <div id="preloader"></div>
     <!-- header-area start -->
     <header>
