@@ -1,4 +1,540 @@
 /* For: vn-web-mobile-app-design.blade.php */
+
+/* Google Fonts Here */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800|Open+Sans:400,400i,600,700');
+
+/*----------------------------------------*/
+/*  1.  Theme default CSS
+/*----------------------------------------*/
+html, body {
+    height: 100%;
+    font-size: 16px;
+}
 body {
-    background-color: #f6f7f8;
+    background: #ffffff none repeat scroll 0 0;
+    color: #999999;
+    font-family: sans-serif;
+    font-size: 1rem;
+    text-align: left;
+    overflow-x: hidden;
+    line-height: 22px;
+}
+#contact, footer {
+    font-family: 'Open Sans', sans-serif;
+}
+.fix {
+	overflow:hidden;
+}
+p {
+	margin:0 0 15px;
+    color: #666;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 10px;
+}
+h1, h2, h3 {
+   font-family: 'Montserrat', sans-serif;
+}
+h1 {
+   line-height: 50px;
+}
+h2 {
+    line-height: 40px;
+}
+h3 {
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 600;
+    color: #444;
+}
+h4 {
+    font-size: 18px;
+    line-height: 1.8;
+    font-weight: 600;
+    margin: 0 0 20px;
+    color: #000;
+}
+h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 700;
+    color: #444;
+}
+a {
+    transition: all 0.3s ease 0s;
+    text-decoration:none;
+}
+a:focus {
+    color: #ffb701;
+    text-decoration: none;
+    outline:0px solid;
+}
+a:hover {
+  color: #252525;
+  text-decoration: none;
+}
+a:active, a:hover {
+  outline: 0 none;
+}
+ul {
+list-style: outside none none;
+margin: 0;
+padding: 0;
+}
+.area-padding {
+  padding: 80px 0;
+}
+.section-head {
+    position: relative;
+    margin-bottom: 20px;
+}
+.section-head::after {
+    background-color: #ffb701;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 50px;
+}
+.section-head h3 span.color {
+    font-weight: 800;
+}
+.section-head+p {
+    margin-bottom: 20px;
+}
+#scrollUp {
+  background: #000 none repeat scroll 0 0;
+  border-radius: 2px;
+  bottom: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  color: #fff;
+  font-size: 20px;
+  height: 34px;
+  line-height: 30px;
+  right: 15px;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  width: 34px;
+}
+#scrollUp:hover {
+    background: #ffb701;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+.display-table {
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.display-table-cell {
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+.parallax-bg {
+    position:relative;
+	z-index: 1;
+}
+.parallax-bg:before {
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:#111;
+    opacity:.7;
+    content:"";
+	z-index: -1;
+}
+.color {
+    color:#ffb701;
+}
+input, select, textarea, input[type="text"], input[type="date"], input[type="url"], input[type="email"], input[type="password"], input[type="tel"], button, button[type="submit"] {
+    -moz-appearance: none;
+    box-shadow: none !important;
+}
+div#preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #fff url('../../serminar/img/logo/preloader.gif') no-repeat center center;
+}
+
+/*----------------------------------------*/
+/*  2. Header Area 
+/*----------------------------------------*/
+.header-area {
+    background: transparent;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 9999;
+}
+.header-area.stick {
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999999;
+	box-shadow: 1px 1px 3px #ddd;
+    background: #fff;
+}
+.logo {
+    display: block;
+    height: 70px;
+}
+.logo a {
+    display: inline-block;
+    height: auto;
+    padding: 15px 0;
+}
+.navbar-brand > img {
+    max-width:65%;
+    height:auto;
+    margin-left: -90px;
+}
+.sticky-logo > img {
+    display: none;
+}
+.stick .navbar-brand > img {
+    display: none;
+}
+.stick .navbar-brand.sticky-logo > img {
+    display: block;
+}
+
+/*--------------------------------*/
+/*  3.Slide Area
+/*--------------------------------*/
+.slide-area {
+    background: url('../img/header.png') no-repeat scroll center / cover;
+    width: 100%;
+    height: 100%;
+}
+.img-contact {
+    background: url('../../serminar/img/background/bg1.jpg') no-repeat scroll center / cover;
+    width: auto;
+    height: 85%;
+}
+.img-footer {
+    background: url('../../serminar/img/background/footer.png') no-repeat scroll center / cover;
+    width: auto;
+    height: 85%;
+}
+.title1 {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-bottom: 60px;
+    border-radius: 50px 10px;
+    color: #ffb701;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.title2 {
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 90px;
+    color: #fff;
+    animation-name: change-color;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes change-color {
+    0%      {color: #fff;}
+    20%     {color: #fff;}
+    35%     {color: #ffb701;}
+    55%     {color: #ffb701;}
+    70%     {color: #000;}
+    85%     {color: #000;}
+}
+.row.equal-cols {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.row.equal-cols:before,
+.row.equal-cols:after {
+    display: block;
+}
+.row.equal-cols > [class*='col-'] {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.row.equal-cols > [class*='col-'] > * {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto; 
+}
+.w-100 {
+    width: 100%;
+}
+.p-2 {
+    padding: .5rem!important;
+}
+.pt-4 {
+    padding-top: 1.5rem!important;
+}
+.pb-5 {
+    padding-bottom: 3rem!important;
+}
+.mt-3 {
+    margin-top: 1rem!important;
+}
+.mb-2 {
+    margin-bottom: .5rem!important;
+}
+.mb-4 {
+    margin-bottom: 1.5rem!important;
+}
+.mb-5 {
+    margin-bottom: 3rem!important
+}
+
+/*--------------------------------*/
+/*  4. Service Area
+/*--------------------------------*/
+.service_content {
+    padding: 40px 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    background-image: url(../../../img/cards-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-box-shadow: 0 20px 40px 0 rgba(0,0,0,.11);
+    box-shadow: 0 5px 40px 0 rgba(0,0,0,.11);
+    color: #000
+}
+.service_content:hover {
+    box-shadow: 0 5px 40px 0 rgba(0,0,0,0.3);
+}
+.service_content ul li {
+    padding: 15px 30px;
+    font-weight: 400;
+    background: url(../img/li-icon.svg) no-repeat left top 20px;
+    line-height: 1.8;
+}
+.box-partner {
+    border: 1px solid #ffb701;
+}
+.box-partner:hover {
+    box-shadow: 0 5px 40px 0 rgba(0,0,0,0.3);
+}
+.img_partner {
+    height: 130px;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+.img_partner a {
+    display: flex;
+    align-items: center;
+}
+.img_partner a img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.img_partner+div.mt-3>h6.text-center {
+    color: #222222;
+    font-size: 16px;
+    font-family: 'Roboto',sans-serif;
+}
+.shadow {
+    box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+}
+.shadow:hover {
+    box-shadow: 0 0 2rem #ffb701;
+}
+.comment {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    padding: 1.5em;
+    background: #ffb701;
+    border: 1px solid #eaeaea;
+    border-radius: 10px;
+}
+.comment:before {
+    position: absolute;
+    content: "\f10d";
+    left: 20px;
+    top: 7px;
+    font-family: fontawesome;
+    font-size: 30px;
+    color: #ea8326;
+}
+.comment:after {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 13px;
+    bottom: -13px;
+    right: 30px;
+    background: url('../img/quote_arrow.png') 0 0 no-repeat;
+}
+.comment p {
+    padding-left: 33px;
+    color: #000;
+    font-size: 14px;
+    text-align: justify;
+}
+.comment-client {
+    text-align: right;
+    margin-right: 20px;
+    font-size: 17px;
+    line-height: 20px;
+    color: #ea8326;
+}
+p.comment-company {
+    text-align: right;
+    margin-right: 20px;
+    font-size: 15px;
+    color: gray;
+}
+.comment-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-left: 100px;
+}
+.comment-avatar img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+/*----------------------------------------*/
+/*  16.	Contact area css
+/*----------------------------------------*/
+.contact-head {
+    background: #f9f9f9;
+    padding: 40px 30px;
+}
+.single-contact a {
+    color: #666;
+    font-size: 16px;
+    display: block;
+}
+.single-contact a i {
+    color: #ffb701;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    border: 1px solid #ccc;
+    border-radius: 0;
+    height: 44px;
+    margin-bottom: 15px;
+    padding-left: 20px;
+    width: 100%;
+}
+.contact-form textarea#message {
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    height: 176px;
+    padding: 20px;
+    width: 100%;
+}
+.contact-page .contact-btn1 {
+    background: #ffb701;
+    border: 2px solid #ffb701;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 5px;
+    padding: 10px 40px;
+    transition: 0.4s;
+    width: auto;
+    text-transform: uppercase;
+	border-radius: 2px;
+	font-weight: 700;
+}
+.contact-page .contact-btn1:hover {
+    background:transparent;
+    border: 2px solid #ffb701 ;
+    color: black;
+    transition: 0.4s;
+}
+
+/*----------------------------------------*/
+/* 17. Footer Css
+/*----------------------------------------*/
+.footer-top-area {
+    background: url('../../serminar/img/background/footer.png') no-repeat scroll center / cover;
+    width: auto;
+    height: 85%;
+}
+.footer-top-area .footer-logo img {
+    width: 20%;
+    margin-bottom: 20px;
+}
+.footer-social ul li {
+    display: inline-block;
+    margin: 0px 2px;
+}
+.footer-social ul li a {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 0px 5px;
+    text-transform: uppercase;
+    display: block;
+    border: 1px solid #fff;
+    width: 34px;
+    height: 34px;
+    line-height: 32px;
+    border-radius: 50%;
+}
+.footer-social ul li a:hover {
+    color: #fff;
+	background:#ffb701;
+    border: 1px solid #ffb701;
+}
+.copyright {
+    margin-top: 20px;
+}
+.copyright  p {
+    margin-bottom: 0;
+    color: #fff;
 }
