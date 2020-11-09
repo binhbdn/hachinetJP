@@ -15,7 +15,7 @@
 		'services_providing'	=>	'提供サービス',
 		'news'	=>	'ニュース',
 		'tt' => 'ベトナムオフショア開発　システム開発　ソフトウェア開発',
-		'new_post' => '新しい投稿',
+		'new_post' =>  '新しい投稿',
 		'contact' => '無料相談お問い合わせ',
 		'angular' => 'Angular 開発サービス',
 		'human_resources' => 'エンジニア採用支援',
