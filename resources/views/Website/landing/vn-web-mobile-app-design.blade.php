@@ -55,9 +55,16 @@
                         <!-- Start Slider content -->
                         <div class="text-center">
                             <div class="slide-content">
-                                <h1 class="title1">Thiết kế</h1>
-                                <h2 class="title2">Website</h2>
-                                <h2 class="title2" style="animation-delay: 2s;">Mobile App</h2>
+                                <h1 class="title1">Thiết kế và&nbsp;Phát&nbsp;triển</h1>
+                                <h2 class="title2">Website, Mobile&nbsp;app, Phần&nbsp;mềm</h2>
+                                <h2 class="title2" style="animation-delay: 2s;">Chuyên nghiệp và&nbsp;Uy&nbsp;tín</h2>
+                                <div class="slider-button">
+                                    <!-- <a class="slide-btn" href="#">Đăng ký ngay</a> -->
+                                    <button type="button" class="slide-btn" data-toggle="modal"
+                                        data-target="#exampleModal">
+                                        Đăng kí ngay
+                                    </button>
+                                </div>
                             </div>
                         </div>
                         <!-- End Slider content -->
@@ -72,10 +79,12 @@
     <section class="area-padding">
         <div class="container">
             <div class="row">
-                <div class="section-head text-center">
-                    <h3>Cung cấp <span class="color">DỊCH VỤ</span></h3>
+                <div class="col-xs-12 section-head text-center">
+                    <h3>Cung cấp <span class="color">DỊCH&nbsp;VỤ</span></h3>
                 </div>
-                <p class="text-center"><em>Những dịch vụ mà <strong class="color">HACHINET</strong> cung cấp đã mang lại giá trị to lớn cho sự thành công của khách hàng trong hơn 3 năm qua.</em></p>
+                <div class="col-xs-12">
+                    <p class="text-center"><em>Những dịch vụ mà <strong class="color">HACHINET</strong> cung cấp đã mang lại giá trị to lớn cho sự thành công của khách hàng trong hơn 3 năm qua.</em></p>
+                </div>
             </div>
             <div class="row equal-cols mb-5">
                 <div class="col-md-4">
@@ -126,11 +135,75 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="section-head text-center">
-                    <h3>Sản phẩm <span class="color">ĐÃ LÀM</span></h3>
+            <div class="row equal-cols mb-5">
+                <div class="col-md-3">
+                    <div class="more-service_content text-center">
+                        <div class="box-circle">
+                            <a href="#">
+                                <span class="circle-item" style="background-image: url('landing/vn-web-app-design/img/1.png');"></span>
+                            </a>
+                        </div>
+                        <h2>
+                            <a href="#">Tên miền</a>
+                        </h2>
+                        <p>
+                            Cung cấp tất cả các loại tên miền .com, .vn, .com.vn...
+                        </p>
+                    </div>
                 </div>
-                <p class="text-center"><em>Các sản phẩm đã làm gần đây của <strong class="color">HACHINET</strong>.</em></p>
+                <div class="col-md-3">
+                    <div class="more-service_content text-center">
+                        <div class="box-circle">
+                            <a href="#">
+                                <span class="circle-item" style="background-image: url('landing/vn-web-app-design/img/2.png');"></span>
+                            </a>
+                        </div>
+                        <h2>
+                            <a href="#">Hosting - VPS</a>
+                        </h2>
+                        <p>
+                        Tư vấn và cung cấp cho khách hàng gói tiết kiệm & hiệu quả nhất.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="more-service_content text-center">
+                        <div class="box-circle">
+                            <a href="#">
+                                <span class="circle-item" style="background-image: url('landing/vn-web-app-design/img/3.png');"></span>
+                            </a>
+                        </div>
+                        <h2>
+                            <a href="#">Thiết kế Logo - Banner</a>
+                        </h2>
+                        <p>
+                            Chúng tôi là Chuyên gia trong lĩnh vực đồ họa.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="more-service_content text-center">
+                        <div class="box-circle">
+                            <a href="#">
+                                <span class="circle-item" style="background-image: url('landing/vn-web-app-design/img/4.png');"></span>
+                            </a>
+                        </div>
+                        <h2>
+                            <a href="#">Thiết kế chuẩn SEO</a>
+                        </h2>
+                        <p>
+                            Mang giá trị doanh nghiệp bạn đến với người dùng.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 section-head text-center">
+                    <h3>Sản phẩm <span class="color">ĐÃ&nbsp;LÀM</span></h3>
+                </div>
+                <div class="col-xs-12">
+                    <p class="text-center"><em>Các sản phẩm đã làm gần đây của <strong class="color">HACHINET</strong>.</em></p>
+                </div>
             </div>
             <div class="row equal-cols mb-5">
                 <div class="col-md-4">
@@ -177,40 +250,24 @@
                 </div>
             </div>
             <div class="row">
-                <div class="section-head text-center">
-                    <h3>Khách hàng nói gì về <span class="color">HACHINET</span></h3>
+                <div class="col-xs-12 section-head text-center">
+                    <h3>Tại sao lại chọn <span class="color">HACHINET</span></h3>
                 </div>
-                <p class="text-center"><em>Sự hài lòng của khách hàng là thành công và niềm tự hào của <strong class="color">HACHINET</strong>.</em></p>
             </div>
             <div class="row equal-cols">
-                <div class="col-md-4">
-                    <div class="comment mb-4">
-                        <p><em>Các mẫu thiết kế rất độc đáo và ấn tượng. Dịch vụ chăm sóc khách hàng tuyệt vời, tận tâm. Mình sẽ còn hợp tác lâu dài.</em></p>
-                    </div>
-                    <h2 class="comment-client">Hoàng HM</h2>
-                    <p class="comment-company">ALI Co.</p>
-                    <div class="comment-avatar mb-4">
-                        <img src="static/img/avatars/4.jpg">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="comment mb-4">
-                        <p><em>Thực sự tôi thấy HACHINET là đơn vị chuyên nghiệp và uy tín trong lĩnh vực thiết kế website. Tôi rất hài lòng.</em></p>
-                    </div>
-                    <h2 class="comment-client">Thúy Ngọc</h2>
-                    <p class="comment-company">GLC Co.</p>
-                    <div class="comment-avatar mb-4">
-                        <img src="static/img/avatars/6.jpg">
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="comment mb-4">
-                        <p><em>HACHINET có đội ngũ nhân sự trẻ những rất năng động. Đặc biệt tôi rất thích phong cách thiết kế của các bạn.</em></p>
-                    </div>
-                    <h2 class="comment-client">Hiền Nguyễn</h2>
-                    <p class="comment-company">SPD Co.</p>
-                    <div class="comment-avatar mb-4">
-                        <img src="static/img/avatars/3.jpg">
+                <div class="col-xs-12">
+                    <div class="why-choose-us">
+                        <em>
+                            <p>
+                                <strong>HACHINET</strong> là một trong những những công ty trẻ tuổi và tài năng tại Việt Nam chuyên giúp các doanh nghiệp thiết kế phần mềm, trang web, mobile app với giá cả phải chăng.
+                            </p>
+                            <p>
+                                Đặc biệt <strong>HACHINET</strong> đã và đang được nhiều tổ chức có uy tín trong và ngoài nước đánh giá cao và lựa chọn làm đối tác lâu dài bởi chất lượng sản phẩm và phong cách làm việc chuyên nghiệp của đội ngũ nhân viên.
+                            </p>
+                            <p>
+                                Vì thế, chúng tôi tự tin có thể mang lại các thành quả tốt đẹp cho đối tác của mình và mong mỏi, tự tin trở thành sự lựa chọn của quý khách hàng. Chắc chắn bạn sẽ hài lòng tuyệt đối.
+                            </p>
+                        </em>
                     </div>
                 </div>
             </div>
@@ -219,12 +276,12 @@
     <section class="pt-4 pb-5">
         <div class="container">
             <div class="row">
-                <div class="section-head text-center">
-                    <h3>Đối tác của <span class="color">CHÚNG TÔI</span></h3>
+                <div class="col-xs-12 section-head text-center">
+                    <h3>Đối tác của <span class="color">CHÚNG&nbsp;TÔI</span></h3>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-md-6 mb-4">
+                <div class="col-md-6 mb-4">
                     <div class="box-partner p-2">
                         <div class="img_partner text-center">
                             <a href="#">
@@ -236,7 +293,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-md-6 mb-4">
+                <div class="col-md-6 mb-4">
                     <div class="box-partner p-2">
                         <div class="img_partner text-center">
                             <a href="#">
@@ -355,8 +412,8 @@
     <section id="contact" class="contact-page area-padding img-contact">
         <div class="container">
             <div class="row">
-                <div class="section-head text-center">
-                    <h3>Liên hệ với <span class="color">CHÚNG TÔI</span></h3>
+                <div class="col-xs-12 section-head text-center">
+                    <h3>Liên hệ với <span class="color">CHÚNG&nbsp;TÔI</span></h3>
                 </div>
             </div>
             <div class="row">
@@ -451,11 +508,80 @@
                 </div>
             </div>
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true" style="z-index: 9999999;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="needs-validation" id="myForm" novalidate>
+                            @csrf
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Tên của bạn*</label>
+                                <input type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                                    placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email*</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                    placeholder="Enter email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Công ty*</label>
+                                <input type="text" class="form-control" id="company" aria-describedby="emailHelp"
+                                    placeholder="Company" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Địa chỉ*</label>
+                                <input type="text" class="form-control" id="address" placeholder="Address" required>
+                            </div>
+                            <button type="button" onclick="sendEmail()"
+                            data-loading-text="<i class='fa fa-spinner fa-spin '></i> Đang gửi"
+                            value="Send An Email" class="slide-btn" id="slide-btn1">Gửi</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Modal -->
     </footer>
     <!-- End Footer Area -->
 
     <!-- all js here -->
     <script type="text/javascript">
+        function sendEmail() {
+            var name = $("#name");
+            var email = $("#email");
+            var address = $("#address");
+            var company = $("#company");
+
+            if (isNotEmpty(name) && isNotEmpty(email) && isNotEmpty(address) && isNotEmpty(company)) {
+                $('.slide-btn').button('loading');
+                $.ajax({
+                    url: 'online-seminar',
+                    method: 'POST',
+                    dataType: 'json',
+                    data: {
+                        "_token": "{{ csrf_token() }}",
+                        name: name.val(),
+                        email: email.val(),
+                        address: address.val(),
+                        company: company.val()
+                    }, success: function (response) {
+                        swal("", "Cảm ơn bạn đã đăng ký, chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất", "success", { button: false });
+                        $('#myForm')[0].reset();
+                        $('.modal').hide();
+                        $('.slide-btn').button('reset');
+                    }
+                });
+            }
+        }
+
         function sendSuccess() {
             alert('internal');
             var nameSuccess = $("#nameSuccess");
