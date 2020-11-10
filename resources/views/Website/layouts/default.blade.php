@@ -43,11 +43,12 @@
 .product_thumbnail{height:200px!important}.product_thumbnail a{background-position:top center;background-size:cover}.title__custom{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.service_single_content .d-blue{font-size:18px!important}#section__contact_us{background:url(../img/contact-us.jpg) no-repeat center;position:relative;background-size:cover}.box__contact_us{background:rgba(199,199,199,0.5);border-radius:6px}@media (max-width: 667px){.m-b-sm-5{margin-bottom:3em!important}}
 @media only screen and (min-width: 992px) and (max-width: 1199px){.welcome-content h2{font-size:42px}.timelineBody{max-height:545px}.team-member-thumb{width:150px}.post-meta p a{margin-right:15px}.post-title h4{font-size:20px}.single-team-member{padding:20px}.cd-intro.default-title > h2{font-size:42px}}@media only screen and (min-width: 768px) and (max-width: 991px){.welcome_area{height:700px!important}.welcome_single_slider.height-900{height:700px}.welcome-content h2{font-size:30px}.cta-content h2{font-size:30px}.timelineBody{max-height:640px}.price_table_text > h1{font-size:36px}.price_table_text > p,.table_text_details > p{font-size:13px}.login-btn{margin:30px}.cd-intro.default-title > h2{font-size:36px}}@media only screen and (max-width: 767px){.login-btn{margin:30px}.welcome-content h2{font-size:24px}.welcome-content p{font-size:14px}.dream-btn{min-width:130px;padding:0 20px;font-size:10px}.single_cool_fact{margin-bottom:50px}.classy-navbar{height:60px}.who-we-contant h4{font-size:24px}.sonar{-webkit-transform:scale(0.5);transform:scale(0.5)}.cta-content h2{font-size:24px}.cta-content p{font-size:14px}.timelineBox{margin-top:100px}.our-mission-area{height:1000px!important}.section-heading h2{font-size:24px}.post-meta p a{margin-right:15px}.post-title h4{font-size:20px}.footer-side-thumbnail{width:100%}.welcome_single_slider.height-900{height:600px}.welcome_area.sliders{height:600px!important}.cd-intro.default-title > h2{font-size:24px}.welcome_area.animated-headline{height:600px!important;height:600px!important}.dream-btn.video-btn{min-width:70px;padding:0;font-size:20px}#scrollUp{bottom:100px;right:0}.welcome-video-area{margin-top:0}.timelineBody .timeline{padding:1em}.timelineBody .timeline .timelineDate{-webkit-box-flex:0;-ms-flex:0 0 50px;flex:0 0 50px;padding:0}.footer-copywrite-info{text-align:left}.breadcumb--con{padding-top:60px}.welcome-content{margin-top:130px}.sidebar-area{margin-top:100px}.welcome_area{height:1100px!important}.welcome_area.none{height:100vh!important}.sonar{-webkit-transform:scale(1);transform:scale(1)}.welcome-content h2{font-size:30px}.dream-btn{min-width:160px;padding:0 20px;font-size:12px}.single-team-member:after{width:50%}}@media only screen and (min-width: 576px) and (max-width: 767px){.welcome-content h2{font-size:36px}.dream-btn{min-width:160px;padding:0 20px;font-size:12px}.cd-intro.default-title > h2{font-size:30px}.single-team-member:after{width:80%}}#box_sending{display: none;}
 /* vuong */
-    marquee{
-        position: absolute;
-        width:490px;
-        margin-left:200px;
+    .marquee-navbar1{
+        margin-right: 80px;
         font-size: 12px !important;
+    }
+    .marquee-navbar2{
+      display:none;
     }
     label {
     display: none;
@@ -189,7 +190,7 @@
       margin-top: -11px !important;
     }
     marquee{
-        width:333px;
+        margin-right: 30px !important;
     }
     .logo_h img{
       height: 66px;
@@ -214,6 +215,7 @@
     label #sign-one {
       display: block;
     }
+    
     .inner-width {
       height: 60px;
       padding: 0 !important;
@@ -226,11 +228,8 @@
         height: 64px;
         margin-top: -5px !important;
     }
-    marquee{
-        position: absolute;
-        margin-top: 148px;
-        margin-left: 84px;
-        width: 440px !important;
+    .marquee-navbar1{
+     display: none;
     }
     .nav .ul1 {
       position: fixed;
@@ -284,10 +283,7 @@
   }
   @media only screen and (max-width:768px) {
     marquee {
-    position: absolute;
-    margin-top: 148px;
-    margin-left: 84px;
-    width: 264px !important;
+    display:none;
 }
   }
   @media only screen and (min-width:481px) and (max-width:575px) {
