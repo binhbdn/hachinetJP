@@ -51,18 +51,6 @@ class MagazineController extends Controller
     		}
         }
         $dataTags = $this->magazine->getTagsLink($lang);
-        foreach ($data as $key => $val) {
-            if ($lang == 'jp') {
-                $data[$key]->createdAt = date('Y年m月d日', (int)$val->createdAt);
-            } else {
-                $data[$key]->createdAt = date('Y-m-d', (int)$val->createdAt);
-            }
-            foreach ($dataTags as $tags) {
-                if ($tags->keyTags) {
-                    $data[$key]->postContent = $this->help->updateTagsLink($tags->keyTags, $tags->tagsLink, $data[$key]->postContent);
-                }
-            }
-        }
         for ($i = 0; $i < 12; $i++) {
             $date[] = array(
                 'date'  =>  date("F Y", strtotime("-".$i." month")),
