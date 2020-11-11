@@ -244,24 +244,36 @@ div#preloader {
 }
 .title1 {
     display: inline-block;
-    padding: 15px 30px;
-    margin-bottom: 60px;
+    padding: 7px 30px;
+    margin-bottom: 30px;
     border-radius: 50px 10px;
     color: #ffb701;
     background-color: rgba(255, 255, 255, 0.2);
-    font-size: 40px;
+    font-size: 25px;
     font-weight: 800;
     letter-spacing: 1px;
 }
 .title2 {
-    font-size: 80px;
+    font-size: 50px;
     font-weight: 700;
-    line-height: 90px;
+    line-height: 60px;
     color: #fff;
     animation-name: change-color;
     animation-duration: 6s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+}
+@media (max-width: 600px) {
+    .title1 {
+        padding: 4px 18px;
+        margin-bottom: 18px;
+        border-radius: 30px 6px;
+        font-size: 15px;
+    }
+    .title2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
 }
 @keyframes change-color {
     0%      {color: #fff;}
@@ -270,6 +282,28 @@ div#preloader {
     55%     {color: #ffb701;}
     70%     {color: #000;}
     85%     {color: #000;}
+}
+.slider-button {
+    margin-top: 40px;
+}
+.slide-btn {
+    display: inline-block;
+    position: relative;
+    padding: 6px 30px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    background: #ffb701;
+    border: 2px solid #ffb701;
+    border-radius: 7px;
+    transition: 0.5s;
+}
+.slide-btn:hover {
+    color: white;
+    background: transparent;
+    transition: 0.5s;
 }
 .row.equal-cols {
     display: -webkit-flex;
@@ -347,6 +381,44 @@ div#preloader {
     background: url(../img/li-icon.svg) no-repeat left top 20px;
     line-height: 1.8;
 }
+.box-circle {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50px;
+    border: 1px solid #ea8326;
+}
+.box-circle a span.circle-item {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.box-circle a span.circle-item:hover {
+    box-shadow: 0 0 2rem #ffb701;
+}
+.more-service_content h2 {
+    background: url('../img/under-line.png') no-repeat center bottom;
+}
+.more-service_content h2 a {
+    display: block;
+    color: #4984c5;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+}
+.more-service_content h2 a:hover {
+    color: #ffb701;
+}
+.more-service_content p {
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 500;
+}
 .box-partner {
     border: 1px solid #ffb701;
 }
@@ -380,63 +452,38 @@ div#preloader {
 .shadow:hover {
     box-shadow: 0 0 2rem #ffb701;
 }
-.comment {
+.why-choose-us {
     position: relative;
     width: 100%;
-    height: 160px;
     padding: 1.5em;
     background: #ffb701;
     border: 1px solid #eaeaea;
     border-radius: 10px;
 }
-.comment:before {
+.why-choose-us::before {
     position: absolute;
     content: "\f10d";
-    left: 20px;
-    top: 7px;
+    left: 10px;
+    top: 10px;
     font-family: fontawesome;
     font-size: 30px;
     color: #ea8326;
 }
-.comment:after {
+.why-choose-us::after {
     position: absolute;
-    content: "";
-    width: 28px;
-    height: 13px;
-    bottom: -13px;
-    right: 30px;
-    background: url('../img/quote_arrow.png') 0 0 no-repeat;
+    content: "\f10e";
+    right: 10px;
+    bottom: 10px;
+    font-family: fontawesome;
+    font-size: 30px;
+    color: #ea8326;
 }
-.comment p {
-    padding-left: 33px;
+.why-choose-us p {
+    padding-left: 25px;
+    padding-right: 25px;
     color: #000;
     font-size: 14px;
     text-align: justify;
-}
-.comment-client {
-    text-align: right;
-    margin-right: 20px;
-    font-size: 17px;
-    line-height: 20px;
-    color: #ea8326;
-}
-p.comment-company {
-    text-align: right;
-    margin-right: 20px;
-    font-size: 15px;
-    color: gray;
-}
-.comment-avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-left: 100px;
-}
-.comment-avatar img {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    border-radius: 50%;
 }
 
 /*----------------------------------------*/
@@ -445,6 +492,7 @@ p.comment-company {
 .contact-head {
     background: #f9f9f9;
     padding: 40px 30px;
+    margin-bottom: 15px;
 }
 .single-contact a {
     color: #666;
@@ -483,6 +531,7 @@ p.comment-company {
     display: inline-block;
     font-size: 16px;
     margin-top: 5px;
+    margin-bottom: 30px;
     padding: 10px 40px;
     transition: 0.4s;
     width: auto;
