@@ -28,6 +28,11 @@
         pre_loader.fadeOut('slow', function () { $(this).remove(); });
     });
 
+    /* wow active code */
+    if ($(window).width() > 767) {
+        new WOW().init();
+    }
+
     /* scrollUp */
     $.scrollUp({
         scrollText: '<i class="fa fa-angle-up"></i>',
