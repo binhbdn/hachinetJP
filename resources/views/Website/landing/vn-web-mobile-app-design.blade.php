@@ -26,8 +26,8 @@
     <!-- header-area start -->
     <header>
         <section id="sticker" class="header-area default-header hidden-xs">
-            <div class="container">
-                <div class="center">
+            <div class="container-fluid">
+                <div class="row">
                     <!-- logo start -->
                     <div class="col-sm-3 col-sm-offset-6">
                         <div class="logo">
@@ -41,6 +41,34 @@
                         </div>
                     </div>
                     <!-- logo end -->
+                    <div class="col-sm-3">
+                        <!-- mainmenu start -->
+                        <nav class="navbar navbar-default">
+                            <div class="collapse navbar-collapse">
+                                <div class="main-menu">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li>
+                                            <a>Ngôn ngữ
+                                                <img class="icon_language" src="https://hachinet.com/static/img/flags/VietNam.png" />
+                                            </a>
+                                            <ul class="sub-menu sub-1">
+                                                <li>
+                                                    <a href="/design-web-mobile-app">Tiếng Anh
+                                                        <img class="icon_language_sub" src="https://hachinet.com/static/img/flags/USA.png" />
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="/thiet-ke-web-mobile-app">Tiếng Việt
+                                                        <img class="icon_language_sub" src="https://hachinet.com/static/img/flags/VietNam.png" />
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                        <!-- mainmenu end -->
                     </div>
                 </div>
             </section>

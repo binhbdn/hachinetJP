@@ -220,6 +220,63 @@ div#preloader {
 .stick .navbar-brand.sticky-logo > img {
     display: block;
 }
+.navbar-default {
+    margin-bottom: 0;
+    border: none;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+.main-menu > ul > li {
+    cursor: pointer;
+}
+.main-menu ul.navbar-nav li a {
+    width: 125px;
+    padding: 22px 10px 10px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #ffb701;
+}
+.icon_language {
+    width: 20px;
+    float: right;
+}
+.main-menu ul.nav li:hover ul.sub-menu {
+    z-index: 999;
+    visibility: visible;
+    opacity: 1;
+}
+.main-menu ul.nav li ul.sub-menu {
+    position: absolute;
+    z-index: -99;
+    visibility: hidden;
+    opacity: 0;
+    width: 125px;
+    border-top: 2px solid #ffb701;
+    background: #333;
+    transition: all 0.3s ease 0s;
+}
+.main-menu ul.nav li ul.sub-menu li a {
+    color: #f2f2f2;
+    display: block;
+    font-size: 11px;
+    padding: 8px 10px;
+}
+.main-menu ul.nav li:hover ul.sub-menu li a:hover {
+    color: #ffb701;
+    background: #444;
+}
+.stick .main-menu ul.navbar-nav li a {
+    color: #444;
+}
+.icon_language_sub {
+    width: 20px;
+    float: right;
+}
 
 /*--------------------------------*/
 /*  3.Slide Area
