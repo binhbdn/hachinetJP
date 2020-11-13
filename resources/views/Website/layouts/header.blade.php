@@ -2,10 +2,11 @@
     <div class="container">
         <nav class="navbar">
             <a class="navbar-brand logo_h"  href="{{ url('/') }}"><img src="{{asset('static/img/logo-hachinet-alt2.png')}}" alt="WEB制作・業務システム開発・ベトナムソフトウウェアアウトソーーシング "></a>
-            <marquee>{{trans('messages.tt')}}</marquee>
+           
             <!-- <p class="p">{{trans('messages.tt')}}</p> -->
             <div class="navbar-menu">
                 <ul>
+                <li> <marquee class="marquee-navbar1">{{trans('messages.tt')}}</marquee></li>
                     <li><a href="tel:+842462900388" class="span-1 text-body"><i class="fa fa-phone"></i>&nbsp;(+84) 24-6290-0388</a></li>
                     <li class="li"><a href="{{route('contact')}}">{{trans('messages.contact')}}</a></li>
                     <li><a href="{{ url('language/vn') }}"><img class="icon_language" alt="Hachinet Vietnamese" src="{{ asset('static/img/flags/VietNam.png') }}"></a></li>
@@ -25,7 +26,9 @@
                     <i class="fa fa-bars" id="sign-one"></i>
                     <i class="fa fa-times" id="sign-two"></i>
                 </label>
+                <marquee class="marquee-navbar2">{{trans('messages.tt')}}</marquee>
                     <ul class="ul1">
+                   
                         <li class="li1"><a href="/">{{trans('messages.home')}}</a></li>
                         <li class="li1"><a href="{{route('about_us')}}">{{trans('messages.about_us')}}</a></li>
                        <li class="li1"><a href="{{route('services')}}">{{trans('messages.services')}}<i style="margin-left:5px" class="fa-1 fa fa-caret-down" aria-hidden="true"></i></a>
