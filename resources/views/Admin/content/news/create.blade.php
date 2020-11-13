@@ -36,6 +36,9 @@
                                                 @enderror
                                             </div>
                                             <div class="form-group">
+                                                <textarea id="table_content_jp" name="table_content_jp" placeholder="Table of Contents">{{old('table_content_jp')}}</textarea>
+                                            </div>
+                                            <div class="form-group">
                                                 <textarea id="post_content_jp" name="post_content_jp" placeholder="Content">{{old('post_content_jp')}}</textarea>
                                                 @error('post_content_jp')
                                                     <div class="alert alert-danger">{{ 'The field is required.' }}</div>
@@ -59,6 +62,9 @@
                                                 class="@error('title_en') is-invalid @enderror form-control" value="{{old('title_en')}}">
                                             </div>
                                             <div class="form-group">
+                                                <textarea id="table_content_en" name="table_content_en" placeholder="Table of Contents">{{old('table_content_en')}}</textarea>
+                                            </div>
+                                            <div class="form-group">
                                                 <textarea id="post_content_en" name="post_content_en" placeholder="Content">{{old('post_content_en')}}</textarea>
                                             </div>
                                             <div class="form-group">
@@ -78,6 +84,9 @@
                                                 <input type="text" name="title_vn" id="title" placeholder="Title" required
                                                 value="{{old('title_vn')}}"
                                                 class="@error('title_vn') is-invalid @enderror form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea id="table_content_vn" name="table_content_vn" placeholder="Table of Contents">{{old('table_content_vn')}}</textarea>
                                             </div>
                                             <div class="form-group">
                                                 <textarea id="post_content_vn" name="post_content_vn" placeholder="Content">{{old('post_content_vn')}}</textarea>
@@ -226,6 +235,65 @@
             if ($("#post_content_vn").length > 0) {
                 tinymce.init({
                     selector: "textarea#post_content_vn",
+                    theme: "modern",
+                    height: 300,
+                    plugins: [
+                        "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                        "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                        "save table contextmenu directionality emoticons template paste textcolor"
+                    ],
+                    image_title: true,
+                    automatic_uploads: true,
+                    images_upload_url: '/upload',
+                    file_picker_types: 'image',
+                    images_upload_credentials: true,
+                    images_upload_handler: uploadImage,
+                    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+
+                });
+            }
+            if ($("#table_content_jp").length > 0) {
+                tinymce.init({
+                    selector: "textarea#table_content_jp",
+                    theme: "modern",
+                    height: 300,
+                    plugins: [
+                        "advlist autolink link image media lists charmap print preview hr anchor pagebreak spellchecker",
+                        "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                        "save table contextmenu directionality emoticons template paste textcolor"
+                    ],
+                    image_title: true,
+                    automatic_uploads: true,
+                    images_upload_url: '/upload',
+                    file_picker_types: 'image',
+                    images_upload_credentials: true,
+                    images_upload_handler: uploadImage,
+                    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+                });
+            }
+            if ($("#table_content_en").length > 0) {
+                tinymce.init({
+                    selector: "textarea#table_content_en",
+                    theme: "modern",
+                    height: 300,
+                    plugins: [
+                        "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                        "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                        "save table contextmenu directionality emoticons template paste textcolor"
+                    ],
+                    image_title: true,
+                    automatic_uploads: true,
+                    images_upload_url: '/upload',
+                    file_picker_types: 'image',
+                    images_upload_credentials: true,
+                    images_upload_handler: uploadImage,
+                    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+
+                });
+            }
+            if ($("#table_content_vn").length > 0) {
+                tinymce.init({
+                    selector: "textarea#table_content_vn",
                     theme: "modern",
                     height: 300,
                     plugins: [

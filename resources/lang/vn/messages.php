@@ -7,6 +7,7 @@
 		  'jp' => 'Japanese',
 		],
 		
+		'table_contents' => 'Mục Lục',
 		'home'	=>	'Trang chủ',
 		'top_magazine'	=>	'TOP BLOGS',
 		'magazine'	=>	'Blogs',

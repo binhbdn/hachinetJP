@@ -7,6 +7,7 @@
 		  'jp' => 'Japanese',
 		],
 		
+		'table_contents' => 'Table of contents',
 		'home'	=>	'Home',
 		'top_magazine'	=>	'TOP BLOGS',
 		'magazine'	=>	'Hachinet\'s Blogs',
