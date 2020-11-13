@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="vi">
+<html lang="{{ Session::get('locale') }}">
 
 <head>
     <meta charset="utf-8">
@@ -43,7 +43,7 @@
     <!-- Your Chat Plugin code -->
     <div class="fb-customerchat"
         attribution=setup_tool
-        page_id="112351537350806"
+        page_id="111625737415468"
         theme_color="#FFB701"
         logged_in_greeting="Xin chào! HACHINET có thể giúp gì bạn?"
         logged_out_greeting="Xin chào! HACHINET có thể giúp gì bạn?">
@@ -55,14 +55,14 @@
             <div class="container-fluid">
                 <div class="row">
                     <!-- logo start -->
-                    <div class="col-sm-3 col-sm-offset-6">
+                    <div class="col-sm-6 col-sm-offset-3">
                         <div class="logo">
                             <!-- Brand -->
                             <a class="navbar-brand page-scroll" href="https://hachinet.com/">
-                                <img src="landing/serminar/img/logo/hachinet.png" alt="hachinet logo">
+                                <img class="center-block" src="landing/serminar/img/logo/hachinet.png" alt="hachinet logo">
                             </a>
                             <a class="navbar-brand page-scroll sticky-logo" href="https://hachinet.com/">
-                                <img src="landing/serminar/img/logo/hachine.png" alt="hachinet sticky logo">
+                                <img class="center-block" src="landing/serminar/img/logo/hachine.png" alt="hachinet sticky logo">
                             </a>
                         </div>
                     </div>
@@ -74,18 +74,30 @@
                                 <div class="main-menu">
                                     <ul class="nav navbar-nav navbar-right">
                                         <li>
-                                            <a>Ngôn ngữ
-                                                <img class="icon_language" src="https://hachinet.com/static/img/flags/VietNam.png" />
+                                            <a>
+                                                {{trans('messages.lang.lang')}}
+                                                @if(Lang::locale() === 'en')<img class="icon_language" src="{{ asset('static/img/flags/USA.png') }}" />
+                                                @elseif(Lang::locale() === 'jp')<img class="icon_language" src="{{ asset('static/img/flags/Japan.png') }}" />
+                                                @elseif (Lang::locale() === 'vn')<img class="icon_language" src="{{ asset('static/img/flags/VietNam.png') }}" />
+                                                @endif
                                             </a>
                                             <ul class="sub-menu sub-1">
                                                 <li>
-                                                    <a href="/design-web-mobile-app">Tiếng Anh
-                                                        <img class="icon_language_sub" src="https://hachinet.com/static/img/flags/USA.png" />
+                                                    <a href="{{ url('language/vn') }}">
+                                                        {{trans('messages.lang.vn')}}
+                                                        <img class="icon_language_sub" alt="Hachinet Vietnamese" src="{{ asset('static/img/flags/VietNam.png') }}" />
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="/thiet-ke-web-mobile-app">Tiếng Việt
-                                                        <img class="icon_language_sub" src="https://hachinet.com/static/img/flags/VietNam.png" />
+                                                    <a href="{{ url('language/jp') }}">
+                                                        {{trans('messages.lang.jp')}}
+                                                        <img class="icon_language_sub" alt="Hachinet Japanese" src="{{ asset('static/img/flags/Japan.png') }}" />
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="{{ url('language/en') }}">
+                                                        {{trans('messages.lang.en')}}
+                                                        <img class="icon_language_sub" alt="Hachinet English" src="{{ asset('static/img/flags/USA.png') }}" />
                                                     </a>
                                                 </li>
                                             </ul>
@@ -111,12 +123,12 @@
                         <!-- Start Slider content -->
                         <div class="text-center">
                             <div class="slide-content">
-                                <h1 class="title1 wow rotateIn" data-wow-delay=".25s" data-wow-duration="2s">Thiết kế và&nbsp;Phát&nbsp;triển</h1>
-                                <h2 class="title2">Website, Mobile&nbsp;app, Phần&nbsp;mềm</h2>
-                                <h2 class="title2" style="animation-delay: 2s;">Chuyên nghiệp và&nbsp;Uy&nbsp;tín</h2>
-                                <button type="button" class="slide-btn wow fadeInLeftBig" data-wow-delay=".5s" data-wow-duration="2s" data-toggle="modal"
+                                <h1 class="title1 wow rotateIn" data-wow-delay="1s">{{trans('design.design_devlop')}}</h1>
+                                <h2 class="title2">Website, Mobile app, {{trans('design.software')}}</h2>
+                                <h2 class="title2" style="animation-delay: 2s;">{{trans('design.pro_and_reputable')}}</h2>
+                                <button type="button" class="slide-btn wow fadeInLeftBig" data-wow-delay="1s" data-toggle="modal"
                                     data-target="#exampleModal">
-                                    Đăng kí tư vấn ngay
+                                    {{trans('design.sign_up_now')}}
                                 </button>
                             </div>
                         </div>
@@ -131,121 +143,123 @@
     <!-- Start Service Area -->
     <section class="area-padding">
         <div class="container">
+            <!-- Providing services content -->
             <div class="row">
                 <div class="col-xs-12 section-head text-center">
-                    <h3>Cung cấp <span class="color">DỊCH&nbsp;VỤ</span></h3>
+                    <h3>{{trans('design.providing')}} <span class="color">{{trans('design.services')}}</span></h3>
                 </div>
                 <div class="col-xs-12">
-                    <p class="text-center"><em>Những dịch vụ mà <strong class="color">HACHINET</strong> cung cấp đã mang lại giá trị to lớn cho sự thành công của khách hàng trong hơn 3 năm qua.</em></p>
+                    <p class="text-center"><em>{{trans('design.services_txt_1a')}} <strong class="color">HACHINET</strong> {{trans('design.services_txt_1b')}}</em></p>
                 </div>
             </div>
             <div class="row equal-md-cols mb-5">
                 <div class="col-md-4">
-                    <div class="service_content wow fadeInLeftBig" data-wow-delay=".2s" data-wow-duration="1s">
+                    <div class="service_content wow fadeInLeftBig" data-wow-delay=".2s">
                         <a class="text-center" href="#">
                             <div class="mb-2">
-                                <img src="{{ asset('website/img/services/s5.png') }}" alt="Thiết kế Landing Page">
+                                <img src="{{ asset('website/img/services/s5.png') }}" alt="{{trans('design.design')}} {{trans('design.service_1.title')}}">
                             </div>
-                            <h4>Thiết kế<br>Landing Page</h4>
+                            <h4>{{trans('design.design')}}<br>{{trans('design.service_1.title')}}</h4>
                         </a>
                         <ul>
-                            <li>Tiết kiệm chi phí</li>
-                            <li>Thiết kế chuyên nghiệp</li>
-                            <li>Tích hợp tracking (click-to-call, popup, chatbox)</li>
-                            <li>Tối ưu SEO</li>
+                            <li>{{trans('design.service_1.txt_1')}}</li>
+                            <li>{{trans('design.service_1.txt_2')}}</li>
+                            <li>{{trans('design.service_1.txt_3')}}</li>
+                            <li>{{trans('design.service_1.txt_4')}}</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="service_content wow fadeInDownBig" data-wow-delay=".5s" data-wow-duration="1.5s">
+                    <div class="service_content wow fadeInDownBig" data-wow-delay=".2s">
                         <a class="text-center" href="#">
                             <div class="mb-2">
-                                <img src="{{ asset('website/img/services/s2.png') }}" alt="{{trans('service.cobol_development')}}">
+                                <img src="{{ asset('website/img/services/s2.png') }}" alt="{{trans('design.design')}} {{trans('design.service_2.title')}}">
                             </div>
-                            <h4>Thiết kế<br>Web tin tức - bán hàng</h4>
+                            <h4>{{trans('design.design')}}<br>{{trans('design.service_2.title')}}</h4>
                         </a>
                         <ul>
-                            <li>Thiết kế website tin tức đa ngành nghề, đa lĩnh vực</li>
-                            <li>Bảo hành trọn đời</li>
-                            <li>Chuẩn SEO - Tối ưu tốc độ</li>
-                            <li>Tặng tên miền theo gói</li>
+                            <li>{{trans('design.service_2.txt_1')}}</li>
+                            <li>{{trans('design.service_2.txt_2')}}</li>
+                            <li>{{trans('design.service_2.txt_3')}}</li>
+                            <li>{{trans('design.service_2.txt_4')}}</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="service_content wow fadeInRightBig" data-wow-delay=".2s" data-wow-duration="1s">
+                    <div class="service_content wow fadeInRightBig" data-wow-delay=".2s">
                         <a class="text-center" href="#">
                             <div class="mb-2">
-                                <img src="{{ asset('website/img/services/s4.png') }}" alt="{{trans('service.front_end_outsource')}}">
+                                <img src="{{ asset('website/img/services/s4.png') }}" alt="{{trans('design.design')}} {{trans('design.service_3.title')}}">
                             </div>
-                            <h4>Thiết kế<br>Phần Mềm Web - App Mobile</h4>
+                            <h4>{{trans('design.design')}}<br>{{trans('design.service_3.title')}}</h4>
                         </a>
                         <ul>
-                            <li>Thiết kế tất cả các dạng phần mềm như: bán hàng, quản lý công ty, giáo dục, tài chính....</li>
-                            <li>Thiết kế đa nền tảng</li>
-                            <li>UI/ UX thân thiện với người dùng</li>
+                            <li>{{trans('design.service_3.txt_1')}}</li>
+                            <li>{{trans('design.service_3.txt_2')}}</li>
+                            <li>{{trans('design.service_3.txt_3')}}</li>
                         </ul>
                     </div>
                 </div>
             </div>
+            <!-- Other services content -->
             <div class="row equal-md-cols mb-5">
                 <div class="col-md-3">
-                    <div class="more-service_content text-center wow rollIn" data-wow-delay=".3s" data-wow-duration="2s">
+                    <div class="more-service_content text-center wow rollIn" data-wow-delay=".2s">
                         <div class="box-circle">
                             <a href="#">
                                 <span class="circle-item" style="background-image: url('landing/vn-web-app-design/img/1.png');"></span>
                             </a>
                         </div>
                         <h2>
-                            <a href="#">Tên miền</a>
+                            <a href="#">{{trans('design.other_service_1.title')}}</a>
                         </h2>
                         <p>
-                            Cung cấp tất cả các loại tên miền .com, .vn, .com.vn...
+                        {{trans('design.other_service_1.txt_1')}}
                         </p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="more-service_content text-center wow rollIn" data-wow-delay=".3s" data-wow-duration="2s">
+                    <div class="more-service_content text-center wow rollIn" data-wow-delay=".2s">
                         <div class="box-circle">
                             <a href="#">
                                 <span class="circle-item" style="background-image: url('landing/vn-web-app-design/img/2.png');"></span>
                             </a>
                         </div>
                         <h2>
-                            <a href="#">Hosting - VPS</a>
+                            <a href="#">{{trans('design.other_service_2.title')}}</a>
                         </h2>
                         <p>
-                            Chúng tôi sẵn sàng tư vấn cho khách hàng nhanh chóng và hiệu quả.
+                            <strong class="color">HACHINET</strong> {{trans('design.other_service_2.txt_1')}}
                         </p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="more-service_content text-center wow rollIn" data-wow-delay=".3s" data-wow-duration="2s">
+                    <div class="more-service_content text-center wow rollIn" data-wow-delay=".2s">
                         <div class="box-circle">
                             <a href="#">
                                 <span class="circle-item" style="background-image: url('landing/vn-web-app-design/img/3.png');"></span>
                             </a>
                         </div>
                         <h2>
-                            <a href="#">Thiết kế Logo - Banner</a>
+                            <a href="#">{{trans('design.other_service_3.title')}}</a>
                         </h2>
                         <p>
-                            Chúng tôi sở hữu những chuyên gia thiết kế đồ họa hàng đầu.
+                            <strong class="color">HACHINET</strong> {{trans('design.other_service_3.txt_1')}}
                         </p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="more-service_content text-center wow rollIn" data-wow-delay=".3s" data-wow-duration="2s">
+                    <div class="more-service_content text-center wow rollIn" data-wow-delay=".2s">
                         <div class="box-circle">
                             <a href="#">
                                 <span class="circle-item" style="background-image: url('landing/vn-web-app-design/img/4.png');"></span>
                             </a>
                         </div>
                         <h2>
-                            <a href="#">Thiết kế chuẩn SEO</a>
+                            <a href="#">{{trans('design.other_service_4.title')}}</a>
                         </h2>
                         <p>
-                            Khách hàng nhanh chóng tìm thấy website của mình trên các công cụ tìm kiếm.
+                        {{trans('design.other_service_4.txt_1')}}
                         </p>
                     </div>
                 </div>
@@ -260,7 +274,7 @@
             </div>
             <div class="row equal-md-cols mb-5">
                 <div class="col-md-4">
-                    <div class="service_content wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service_content wow fadeInUp" data-wow-delay=".2s">
                         <a class="text-center" href="https://www.devwork.vn/" title="Devwork.vn" target="_blank">
                             <div class="product_thumbnail_box w-100 mb-2">
                                 <div class="product_thumbnail w-100 h-100" style="background-image: url('upload/casestudy/devworkvn-202007240926_733422683.png')"></div>
@@ -274,21 +288,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="service_content wow fadeInUp" data-wow-delay=".3s">
-                        <a class="text-center" href="https://netbee.vn/" title="Netbee.vn" target="_blank">
-                            <div class="product_thumbnail_box w-100 mb-2">
-                                <div class="product_thumbnail w-100 h-100" style="background-image: url('upload/casestudy/netbeevn-202007240927_1525397999.png')"></div>
-                            </div>
-                            <h4>Netbee.vn</h4>
-                        </a>
-                        <ul>
-                            <li>Website tuyển sinh và xuất khẩu lao động.</li>
-                            <li><a href="case-study/netbeevn" target="_blank">Xem mô tả...</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service_content wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service_content wow fadeInUp" data-wow-delay=".2s">
                         <a class="text-center" href="case-study/vi-tien-ao" title="Ví tiền ảo" target="_blank">
                             <div class="product_thumbnail_box w-100 mb-2">
                                 <div class="product_thumbnail w-100 h-100" style="background-image: url('upload/casestudy/vi-tien-ao-202003211058_782819711.png')"></div>
@@ -301,10 +301,24 @@
                         </ul>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="service_content wow fadeInUp" data-wow-delay=".2s">
+                        <a class="text-center" href="https://netbee.vn/" title="Netbee.vn" target="_blank">
+                            <div class="product_thumbnail_box w-100 mb-2">
+                                <div class="product_thumbnail w-100 h-100" style="background-image: url('upload/casestudy/netbeevn-202007240927_1525397999.png')"></div>
+                            </div>
+                            <h4>Netbee.vn</h4>
+                        </a>
+                        <ul>
+                            <li>Website tuyển sinh và xuất khẩu lao động.</li>
+                            <li><a href="case-study/netbeevn" target="_blank">Xem mô tả...</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="row equal-md-cols mb-5">
                 <div class="col-md-4">
-                    <div class="service_content wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service_content wow fadeInUp" data-wow-delay=".2s">
                         <a class="text-center" href="https://varsan.jp/" title="Varsan.jp" target="_blank">
                             <div class="product_thumbnail_box w-100 mb-2">
                                 <div class="product_thumbnail w-100 h-100" style="background-image: url('upload/casestudy/varsanjp-202003251114_1253155110.png')"></div>
@@ -318,7 +332,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="service_content wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service_content wow fadeInUp" data-wow-delay=".2s">
                         <a class="text-center" href="case-study/he-thong-quan-ly-noi-bo-doanh-nghiep" title="Hệ thống quản lý nội bộ doanh nghiệp" target="_blank">
                             <div class="product_thumbnail_box w-100 mb-2">
                                 <div class="product_thumbnail w-100 h-100" style="background-image: url('upload/casestudy/he-thong-quan-ly-noi-bo-doanh-nghiep-202003240715_1304506201.png')"></div>
@@ -332,7 +346,7 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="service_content wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service_content wow fadeInUp" data-wow-delay=".2s">
                         <a class="text-center" href="case-study/booking-platform" title="Booking platform" target="_blank">
                             <div class="product_thumbnail_box w-100 mb-2">
                                 <div class="product_thumbnail w-100 h-100" style="background-image: url('upload/casestudy/booking-platform-202003240733_1051983253.jpeg')"></div>
@@ -348,7 +362,7 @@
             </div>
             <div class="row equal-md-cols mb-5">
                 <div class="col-md-6">
-                    <div class="service_content wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service_content wow fadeInUp" data-wow-delay=".2s">
                         <a class="text-center" href="case-study/nhat-ky-giac-mo" title="Nhật ký giấc mơ" target="_blank">
                             <div class="product_thumbnail_box w-100 mb-2">
                                 <div class="product_thumbnail w-100 h-100" style="background-image: url('upload/casestudy/-202003240616_314336044.png')"></div>
@@ -362,7 +376,7 @@
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="service_content wow fadeInUp" data-wow-delay=".3s">
+                    <div class="service_content wow fadeInUp" data-wow-delay=".2s">
                         <a class="text-center" href="case-study/gametector" title="Gametector" target="_blank">
                             <div class="product_thumbnail_box w-100 mb-2">
                                 <div class="product_thumbnail w-100 h-100" style="background-image: url('upload/casestudy/gametector-202003240450_438184987.jpeg')"></div>
@@ -383,7 +397,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="why-choose-us wow swing" data-wow-delay=".3s" data-wow-duration="2s">
+                    <div class="why-choose-us wow swing" data-wow-delay=".2s">
                         <em>
                             <p>
                                 <strong>HACHINET</strong> là một trong những những công ty trẻ tuổi và tài năng tại Việt Nam chuyên giúp các doanh nghiệp thiết kế phần mềm, trang web, mobile app với giá cả phải chăng.
@@ -409,7 +423,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6 mb-4">
-                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".2s">
                         <div class="img_partner text-center">
                             <a href="#">
                                 <img src="{{asset('images/partner/logo-deha.png')}}" class="colored-icon" alt="">
@@ -421,7 +435,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 mb-4">
-                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".2s">
                         <div class="img_partner text-center">
                             <a href="#">
                                 <img src="{{asset('images/partner/logo-omni.png')}}" class="colored-icon" alt="">
@@ -435,7 +449,7 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-3 col-sm-6 mb-4">
-                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".2s">
                         <div class="img_partner text-center">
                             <a href="#">
                                 <img src="{{asset('images/partner/logo_viettel2.png')}}" class="colored-icon" alt="">
@@ -447,7 +461,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-3 col-sm-6 mb-4">
-                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".2s">
                         <div class="img_partner text-center">
                             <a href="#">
                                 <img src="{{asset('images/partner/ttc-logo.png')}}" class="colored-icon" alt="">
@@ -459,7 +473,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-3 col-sm-6 mb-4">
-                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".2s">
                         <div class="img_partner text-center">
                             <a href="#">
                                 <img src="{{asset('images/partner/beetsoft-logo.png')}}" class="colored-icon" alt="">
@@ -471,7 +485,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-3 col-sm-6 mb-4">
-                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".2s">
                         <div class="img_partner text-center">
                             <a href="#">
                                 <img src="{{asset('images/partner/logo-gmoz.png')}}" class="colored-icon" alt="">
@@ -483,7 +497,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-3 col-sm-6 mb-4">
-                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".2s">
                         <div class="img_partner text-center">
                             <a href="#">
                                 <img src="{{asset('images/partner/itplink-logo.svg')}}" class="colored-icon" alt="">
@@ -495,7 +509,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-3 col-sm-6 mb-4">
-                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".2s">
                         <div class="img_partner text-center">
                             <a href="#">
                                 <img src="{{asset('images/partner/nal-logo.png')}}" class="colored-icon" alt="">
@@ -507,7 +521,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-3 col-sm-6 mb-4">
-                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".2s">
                         <div class="img_partner text-center">
                             <a href="#">
                                 <img src="{{asset('images/partner/logo-azet.png')}}" class="colored-icon" alt="">
@@ -519,7 +533,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-3 col-sm-6 mb-4">
-                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="box-partner p-2 wow fadeInUp" data-wow-delay=".2s">
                         <div class="img_partner text-center">
                             <a href="#">
                                 <img src="{{asset('images/partner/logo-hachix.png')}}" class="colored-icon" alt="">
