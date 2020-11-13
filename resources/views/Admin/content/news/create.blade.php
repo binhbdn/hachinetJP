@@ -35,9 +35,11 @@
                                                     <div class="alert alert-danger">{{ 'The field is required.' }}</div>
                                                 @enderror
                                             </div>
+                                            <label for="table_content_jp">Table Of Content:</label>
                                             <div class="form-group">
                                                 <textarea id="table_content_jp" name="table_content_jp" placeholder="Table of Contents">{{old('table_content_jp')}}</textarea>
                                             </div>
+                                            <label for="post_content_jp">Content</label>
                                             <div class="form-group">
                                                 <textarea id="post_content_jp" name="post_content_jp" placeholder="Content">{{old('post_content_jp')}}</textarea>
                                                 @error('post_content_jp')
@@ -61,9 +63,11 @@
                                                 <input type="text" name="title_en" id="title" placeholder="Title" 
                                                 class="@error('title_en') is-invalid @enderror form-control" value="{{old('title_en')}}">
                                             </div>
+                                            <label for="table_content_en">Table Of Content:</label>
                                             <div class="form-group">
                                                 <textarea id="table_content_en" name="table_content_en" placeholder="Table of Contents">{{old('table_content_en')}}</textarea>
                                             </div>
+                                            <label for="post_content_en">Content</label>
                                             <div class="form-group">
                                                 <textarea id="post_content_en" name="post_content_en" placeholder="Content">{{old('post_content_en')}}</textarea>
                                             </div>
@@ -85,9 +89,11 @@
                                                 value="{{old('title_vn')}}"
                                                 class="@error('title_vn') is-invalid @enderror form-control">
                                             </div>
+                                            <label for="table_content_vn">Table Of Content:</label>
                                             <div class="form-group">
                                                 <textarea id="table_content_vn" name="table_content_vn" placeholder="Table of Contents">{{old('table_content_vn')}}</textarea>
                                             </div>
+                                            <label for="post_content_vn">Content:</label>
                                             <div class="form-group">
                                                 <textarea id="post_content_vn" name="post_content_vn" placeholder="Content">{{old('post_content_vn')}}</textarea>
                                             </div>
