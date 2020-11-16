@@ -1,9 +1,3 @@
-<!--
-    ENGLISH LANGUAGE For:
-    design-web-mobile-app.blade.php
-    https://hachinet.com/design-web-mobile-app
-    https://hachinet.com/thiet-ke-web-mobile-app
--->
 <?php
 return [
     // Slider content
@@ -54,6 +48,35 @@ return [
         'title' => 'On-page SEO Designing',
         'txt_1' => 'Customers quickly find their website on search engines.',
     ],
-
+    // Completed products content
+    'completed_products' => [
+        'title_1' => 'Completed',
+        'title_2' => 'PRODUCTS',
+        'txt_1' => '',
+        'txt_2' => "'s recent completed products.",
+    ],
+    // Why choose HACHINET content
+    'why_choose_us' => [
+        'title' => 'Why choose',
+        'txt_1' => 'is one of the young and talented companies in Vietnam specializing in helping businesses design software, websites, and mobile apps at affordable prices.',
+        'txt_2' => 'Especially,',
+        'txt_3' => 'has been highly appreciated and chosen by many prestigious organizations at home and abroad to be a long-term partner because of the product quality and professional working style of the staff.',
+        'txt_4' => 'Therefore, we can confidently bring good results to our partners and wish to be confident as the choice of our customers. Surely you will be absolutely satisfied.',
+    ],
+    // Our partner content
+    'our_partner' => [
+        'title_1' => 'Our',
+        'title_2' => 'PARTNER',
+    ],
+    // Contact us content
+    'contact_us' => [
+        'title_1' => 'Contact',
+        'title_2' => 'US',
+        'txt_1' => 'Address',
+    ],
+    // Modal
+    'modal' => [
+        'send' => 'Send',
+    ],
 ];
 ?>

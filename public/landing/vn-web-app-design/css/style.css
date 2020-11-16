@@ -370,6 +370,9 @@ div#preloader {
     background: transparent;
     transition: 0.5s;
 }
+#slide-btn1:hover {
+    color: black;
+}
 @media (min-width: 992px) {
     .row.equal-md-cols {
         display: -webkit-flex;

@@ -1,9 +1,3 @@
-<!--
-    VIETNAMESE LANGUAGE For:
-    design-web-mobile-app.blade.php
-    https://hachinet.com/design-web-mobile-app
-    https://hachinet.com/thiet-ke-web-mobile-app
--->
 <?php
 return [
     // Slider content
@@ -54,6 +48,35 @@ return [
         'title' => 'Thiết kế chuẩn SEO',
         'txt_1' => 'Khách hàng nhanh chóng tìm thấy website của mình trên các công cụ tìm kiếm.',
     ],
-
+    // Completed products content
+    'completed_products' => [
+        'title_1' => 'Sản phẩm',
+        'title_2' => 'ĐÃ LÀM',
+        'txt_1' => 'Các sản phẩm đã làm gần đây của',
+        'txt_2' => '.',
+    ],
+    // Why choose HACHINET content
+    'why_choose_us' => [
+        'title' => 'Tại sao lại chọn',
+        'txt_1' => 'là một trong những những công ty trẻ tuổi và tài năng tại Việt Nam chuyên giúp các doanh nghiệp thiết kế phần mềm, trang web, mobile app với giá cả phải chăng.',
+        'txt_2' => 'Đặc biệt',
+        'txt_3' => 'đã và đang được nhiều tổ chức có uy tín trong và ngoài nước đánh giá cao và lựa chọn làm đối tác lâu dài bởi chất lượng sản phẩm và phong cách làm việc chuyên nghiệp của đội ngũ nhân viên.',
+        'txt_4' => 'Vì thế, chúng tôi tự tin có thể mang lại các thành quả tốt đẹp cho đối tác của mình và mong mỏi, tự tin trở thành sự lựa chọn của quý khách hàng. Chắc chắn bạn sẽ hài lòng tuyệt đối.',
+    ],
+    // Our partner content
+    'our_partner' => [
+        'title_1' => 'Đối tác của',
+        'title_2' => 'CHÚNG TÔI',
+    ],
+    // Contact us content
+    'contact_us' => [
+        'title_1' => 'Liên hệ với',
+        'title_2' => 'CHÚNG TÔI',
+        'txt_1' => 'Địa chỉ',
+    ],
+    // Modal
+    'modal' => [
+        'send' => 'Gửi',
+    ],
 ];
 ?>
