@@ -141,4 +141,18 @@ class HomeController extends Controller
         $breadcrumb['title'] = 'messages.services_providing';
         return view('Website.content.services', ['class' => $class, 'breadcrumb' => (object)$breadcrumb]);
     }
+
+    public function design_web_mobile_app() {
+        $lang = Session::get('locale');
+        $limit = 15;
+        $offset = 0;
+        $data = $this->case->getListCaseStudy($limit, $offset, $lang);
+        // dd($data);
+        foreach ($data as $key => $val) {
+            $data[$key]->productImages = explode(',', $val->productImages);
+        }
+        return view('Website.landing.design-web-mobile-app', [
+            'products'  =>  $data,
+        ]);
+    }
 }

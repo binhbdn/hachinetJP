@@ -114,9 +114,7 @@ Route::group(['middleware' => 'localization', 'namespace' => 'Website', 'prefix'
         }
         return view('Website.landing.haken', ['cobol' => false]);
     })->name('haken');
-    Route::get('thiet-ke-web-mobile-app', function() {
-        return view('Website.landing.vn-web-mobile-app-design');
-    });
+    Route::get('design-web-mobile-app', 'HomeController@design_web_mobile_app');
     Route::get('online-seminar-vi', function() {
         return view('Website.online-seminar.vn-online-seminar');
     });

@@ -2,6 +2,7 @@
 
     return [
 		'lang' => [
+		  'lang' => 'Language',
 		  'en' => 'English',
 		  'vn' => 'Vietnamese',
 		  'jp' => 'Japanese',

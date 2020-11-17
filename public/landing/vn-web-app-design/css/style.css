@@ -1,4 +1,4 @@
-/* For: vn-web-mobile-app-design.blade.php */
+/* For: design-web-mobile-app.blade.php */
 
 /* Google Fonts Here */
 
@@ -207,9 +207,8 @@ div#preloader {
     padding: 15px 0;
 }
 .navbar-brand > img {
-    max-width:65%;
+    max-width:32.5%;
     height:auto;
-    margin-left: -90px;
 }
 .sticky-logo > img {
     display: none;
@@ -370,6 +369,9 @@ div#preloader {
     color: white;
     background: transparent;
     transition: 0.5s;
+}
+#slide-btn1:hover {
+    color: black;
 }
 @media (min-width: 992px) {
     .row.equal-md-cols {
