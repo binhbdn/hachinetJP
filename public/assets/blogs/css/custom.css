@@ -225,3 +225,30 @@ display: -webkit-box;
 overflow: hidden;
 text-overflow: ellipsis;
 }
+.font-bold{
+    font-weight: bold;
+}
+#toggle + label:after {
+  content:"[Show]" 
+}
+#toggle:checked + label:after {
+  content:"[Hide]"
+}
+#toggle {
+  position:absolute;
+  appearance:none;
+}
+.fs-8{
+    font-size: 80%;
+}
+.table-contents{
+    background: #fafafa;
+    border: 1px solid #ffb701;
+    padding: 20px;
+}
+.body-content p a:hover{
+    color: #ffb701 !important;
+}
+.body-content p a{
+    color: #000;
+}

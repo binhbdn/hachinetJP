@@ -33,6 +33,22 @@
                     </div>
                     <div class="row mt-4">
                         <div class="col-12 col-md-8 posts-content">
+                           @if ($posts->postTableContent != NULL)
+                            <div class="form-group mb-4 text-left table-contents">
+                                <div>
+                                    <b class="font-bold">{{ trans('messages.table_contents') }}</b>
+                                    <span>
+                                        <input type="checkbox" name="toggle" id="toggle" data-toggle="collapse" href="#collapseExample"  aria-expanded="false" aria-controls="collapseExample"/>
+                                        <label class="fs-8" for="toggle"></label>
+                                    </span>
+                                </div>
+                                <div class="collapse body-content" id="collapseExample">
+                                    @php
+                                        echo $posts->postTableContent;
+                                    @endphp
+                                </div>
+                            </div> 
+                           @endif
                             @php
                                 echo $posts->postContent;
                             @endphp

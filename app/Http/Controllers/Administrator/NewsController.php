@@ -101,6 +101,7 @@ class NewsController extends Controller
                 [
                     'postId'    =>  $postId,
                     'postTitle' =>  $request->title_jp,
+                    'postTableContent' => $request ->table_content_jp,
                     'postContent'   =>  $request->post_content_jp,
                     'postDesc'  =>  $request->description_jp,
                     'postLang'  =>  'jp',
@@ -110,6 +111,7 @@ class NewsController extends Controller
                 [
                     'postId'    =>  $postId,
                     'postTitle' =>  $request->title_en,
+                    'postTableContent' => $request ->table_content_en,
                     'postContent'   =>  $request->post_content_en,
                     'postDesc'  =>  $request->description_en,
                     'postLang'  =>  'en',
@@ -119,6 +121,7 @@ class NewsController extends Controller
                 [
                     'postId'    =>  $postId,
                     'postTitle' =>  $request->title_vn,
+                    'postTableContent' => $request ->table_content_vn,
                     'postContent'   =>  $request->post_content_vn,
                     'postDesc'  =>  $request->description_vn,
                     'postLang'  =>  'vn',
@@ -202,6 +205,7 @@ class NewsController extends Controller
                 [
                     'postId'    =>  $id,
                     'postTitle' =>  $request->title_jp,
+                    'postTableContent' => $request ->table_content_jp,
                     'postContent'   =>  $request->post_content_jp,
                     'postDesc'  =>  $request->description_jp,
                     'postLang'  =>  'jp',
@@ -211,6 +215,7 @@ class NewsController extends Controller
                 [
                     'postId'    =>  $id,
                     'postTitle' =>  $request->title_en,
+                    'postTableContent' => $request ->table_content_en,
                     'postContent'   =>  $request->post_content_en,
                     'postDesc'  =>  $request->description_en,
                     'postLang'  =>  'en',
@@ -220,6 +225,7 @@ class NewsController extends Controller
                 [
                     'postId'    =>  $id,
                     'postTitle' =>  $request->title_vn,
+                    'postTableContent' => $request ->table_content_vn,
                     'postContent'   =>  $request->post_content_vn,
                     'postDesc'  =>  $request->description_vn,
                     'postLang'  =>  'vn',

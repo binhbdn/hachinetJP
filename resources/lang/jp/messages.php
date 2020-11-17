@@ -7,6 +7,7 @@
 		  'jp' => '日本語',
 		],
 		
+		'table_contents' => '目次',
 		'home'	=>	'ホーム',
 		'top_magazine'	=>	'トップブログ',
 		'magazine'	=>	'ブログ',

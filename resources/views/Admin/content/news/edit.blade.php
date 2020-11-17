@@ -37,6 +37,11 @@
                                                     <div class="alert alert-danger">{{ 'The field is required.' }}</div>
                                                 @enderror
                                             </div>
+                                            <label for="table_content_jp">Table Of Content:</label>
+                                            <div class="form-group">
+                                                <textarea id="table_content_jp" name="table_content_jp" placeholder="Content">{{$dataJp->postTableContent}}</textarea>
+                                            </div>
+                                            <label for="post_content_jp">Content:</label>
                                             <div class="form-group">
                                                 <textarea id="post_content_jp" name="post_content_jp" placeholder="Content">{{$dataJp->postContent}}</textarea>
                                                 @error('post_content_jp')
@@ -60,6 +65,11 @@
                                             <div class="form-group">
                                                 <input type="text" name="title_en" id="title" placeholder="Title" class="form-control" value="{{$dataEn->postTitle}}">
                                             </div>
+                                            <label for="table_content_en">Table Of Content:</label>
+                                            <div class="form-group">
+                                                <textarea id="table_content_en" name="table_content_en" placeholder="Content">{{$dataEn->postTableContent}}</textarea>
+                                            </div>
+                                            <label for="post_content_en">Content:</label>
                                             <div class="form-group">
                                                 <textarea id="post_content_en" name="post_content_en" placeholder="Content">{{$dataEn->postContent}}</textarea>
                                             </div>
@@ -82,6 +92,11 @@
                                                 value="{{$dataVn->postTitle}}"
                                                 class="@error('title_jp') is-invalid @enderror form-control">
                                             </div>
+                                            <label for="table_content_vn">Table Of Content:</label>
+                                            <div class="form-group">
+                                                <textarea id="table_content_vn" name="table_content_vn" placeholder="Content">{{$dataVn->postTableContent}}</textarea>
+                                            </div>
+                                            <label for="post_content_vn">Content:</label>
                                             <div class="form-group">
                                                 <textarea id="post_content_vn" name="post_content_vn" placeholder="Content">{{$dataVn->postContent}}</textarea>
                                             </div>
@@ -252,6 +267,65 @@
             if ($("#post_content_vn").length > 0) {
                 tinymce.init({
                     selector: "textarea#post_content_vn",
+                    theme: "modern",
+                    height: 300,
+                    plugins: [
+                        "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                        "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                        "save table contextmenu directionality emoticons template paste textcolor"
+                    ],
+                    image_title: true,
+                    automatic_uploads: true,
+                    images_upload_url: '/upload',
+                    file_picker_types: 'image',
+                    images_upload_credentials: true,
+                    images_upload_handler: uploadImage,
+                    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+
+                });
+            }
+            if ($("#table_content_jp").length > 0) {
+                tinymce.init({
+                    selector: "textarea#table_content_jp",
+                    theme: "modern",
+                    height: 300,
+                    plugins: [
+                        "advlist autolink link image media lists charmap print preview hr anchor pagebreak spellchecker",
+                        "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                        "save table contextmenu directionality emoticons template paste textcolor"
+                    ],
+                    image_title: true,
+                    automatic_uploads: true,
+                    images_upload_url: '/upload',
+                    file_picker_types: 'image',
+                    images_upload_credentials: true,
+                    images_upload_handler: uploadImage,
+                    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+                });
+            }
+            if ($("#table_content_en").length > 0) {
+                tinymce.init({
+                    selector: "textarea#table_content_en",
+                    theme: "modern",
+                    height: 300,
+                    plugins: [
+                        "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                        "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                        "save table contextmenu directionality emoticons template paste textcolor"
+                    ],
+                    image_title: true,
+                    automatic_uploads: true,
+                    images_upload_url: '/upload',
+                    file_picker_types: 'image',
+                    images_upload_credentials: true,
+                    images_upload_handler: uploadImage,
+                    toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+
+                });
+            }
+            if ($("#table_content_vn").length > 0) {
+                tinymce.init({
+                    selector: "textarea#table_content_vn",
                     theme: "modern",
                     height: 300,
                     plugins: [
