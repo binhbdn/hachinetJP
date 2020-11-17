@@ -1,5 +1,9 @@
 <?php
 return [
+    // Facebook Chat Plugin
+    'log_in' => 'Xin chào! HACHINET có thể giúp gì bạn?',
+    'log_out' => 'Xin chào! HACHINET có thể giúp gì bạn?',
+    'js_src' => 'vi_VN',
     // Slider content
     'design_devlop' => 'Thiết kế và Phát triển',
     'software' => 'Phần mềm',

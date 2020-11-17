@@ -1,5 +1,9 @@
 <?php
 return [
+    // Facebook Chat Plugin
+    'log_in' => 'Hello! How can HACHINET help you?',
+    'log_out' => 'Hello! How can HACHINET help you?',
+    'js_src' => 'en_US',
     // Slider content
     'design_devlop' => 'Designing and Development',
     'software' => 'Software',
