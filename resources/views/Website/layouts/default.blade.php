@@ -130,6 +130,7 @@
     z-index: 99;
     background: #ffb701;
     border-top: solid 1px #b08282;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.40);
   }
   .nav::after {
     content: '';
@@ -165,7 +166,7 @@
     top: 60px;
     opacity: 0;
     visibility: hidden;
-    transition: top 1s;
+    /* transition: top 1s; */
   }
   .nav .ul1 .li1:hover > .ul2 {
     top: 30px;
@@ -371,7 +372,7 @@
         }
         </script>  
     </head>
-    <body class="light-version">
+    <body class="translator-jp light-version">
         <div id="fb-root"></div>
         @if (Session::get('locale') == 'en')
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>

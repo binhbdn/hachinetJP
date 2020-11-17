@@ -133,6 +133,14 @@ class HomeController extends Controller
             'product'   =>  $product[0]
         ]);
     }
+    public function term_of_use(){
+        $class = 'term-of-use';
+        $breadcrumb['name'] = 'messages.Privacy_Policy';
+        $breadcrumb['home'] = 'Home';
+        $breadcrumb['title'] = 'messages.Privacy_Policy';
+        return view('Website.content.term-of-use', ['class' => $class, 'breadcrumb' => (object)$breadcrumb]);
+    
+    }
 
     public function services() {
         $class = 'services';
