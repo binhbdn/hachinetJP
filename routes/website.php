@@ -37,6 +37,8 @@ Route::group(['middleware' => 'localization', 'namespace' => 'Website', 'prefix'
         return redirect('/blogs/announcement-29th-japan-it-spring-week-2020-event-is-temporarily-suspended');
     });
 
+    Route::get('/term-of-use', 'HomeController@term_of_use');
+
     Route::get('/blogs/{post}', 'MagazineController@show')->name('magazine.show');
     Route::get('/blogs/{year}/{month}', 'MagazineController@archive')->name('magazine.archive');
     Route::post('newsletter', 'MagazineController@newsletter')->name('magazine.newsletter');

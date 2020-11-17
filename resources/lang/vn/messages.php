@@ -17,6 +17,7 @@
 		'services_providing'	=>	'Các dịch vụ chúng tôi cung cấp',
 		'news'	=>	'Tin tức', 
 		'tt' => '',
+		'Privacy_Policy' => 'Chính Sách Bảo Mật',
 		'new_post' =>  'Bài Viết Mới',
 		'contact' => 'Liên hệ',
 		'angular' => 'Phát triển Outsource Front-End',

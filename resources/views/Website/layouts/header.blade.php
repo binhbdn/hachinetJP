@@ -33,8 +33,8 @@
                         <li class="li1"><a href="{{route('about_us')}}">{{trans('messages.about_us')}}</a></li>
                        <li class="li1"><a href="{{route('services')}}">{{trans('messages.services')}}<i style="margin-left:5px" class="fa-1 fa fa-caret-down" aria-hidden="true"></i></a>
                             <ul class="ul2">
-                                <li class="li2"><a href="#">{{trans('service.business_application')}}</a></li>
-                                <li class="li2"><a href="#">{{trans('service.website_development')}}</a></li>
+                                <!-- <li class="li2"><a href="#">{{trans('service.business_application')}}</a></li>
+                                <li class="li2"><a href="#">{{trans('service.website_development')}}</a></li> -->
                                 <li class="li2"><a href="{{route('outsource_development')}}">{{trans('messages.angular')}}</a></li>
                                 <li class="li2"><a href="{{route('mobile_app_development')}}">{{trans('service.develope_smartphone')}}</a></li>
                                 <li class="li2"><a href="{{route('java_system_dev')}}">{{trans('service.java_system')}}</a></li>

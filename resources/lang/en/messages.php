@@ -17,6 +17,7 @@
 		'services_providing'	=>	'Services Providing',
 		'news'	=>	'News',
 		'tt' => '',
+		'Privacy_Policy' => 'Privacy Policy',
 		'new_post' =>  'New Posts',
 		'contact' => 'Contact Us',
 		'angular' => 'Front-End Outsource Development',
