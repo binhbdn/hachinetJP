@@ -1402,7 +1402,7 @@ display: none;
   }
   .nav .ul1 .li1 a {
     text-decoration: none;
-    padding: 8px 0;
+    /* padding: 8px 0; */
     color: black;
     transition: 0.5s;
   }
