@@ -131,6 +131,23 @@ html body .db {
 .no-wrap td, .no-wrap th {
   white-space: nowrap; }
 
+  @media(max-width:767px){
+    .mb-nowrap td, .mb-nowrap th{
+        white-space: nowrap;
+    }
+    .icon-center{
+      text-align: center;
+    }
+}
+@media(min-width:768px){
+    .mb-nowrap td, .mb-nowrap th{
+        white-space: inherit;
+    }
+    
+    .icon-center{
+      text-align: center;
+    }
+}
 /*******************
 Blockquote
 *******************/
