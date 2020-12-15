@@ -60,22 +60,22 @@
                         </div>
                     @endif
                     <div class="table-responsive">
-                        <table class="table table-bordered no-wrap table-news">
+                        <table class="table table-bordered mb-nowrap table-news">
                             <thead>
                                 <tr>
-                                	<th>#</th>
-                                    <th >News Thumbnail</th>
-                                    <th >News Title</th>
-                                    <th >Created Date</th>
-                                    <th >Show Home</th>
-                                    <th class="text-nowrap" >Action</th>
+                                	<th width="10%">#</th>
+                                    <th width="20%">News Thumbnail</th>
+                                    <th width="40%">News Title</th>
+                                    <th width="14%">Created Date</th>
+                                    <th width="10%">Show Home</th>
+                                    <th width="6%" class="text-nowrap" >Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @foreach ($news as $k => $new)
                                 <tr>
-                                	<td>{{$k + 1}}</td>
-                                    <td>
+                                	<td width="10%">{{$k + 1}}</td>
+                                    <td width="20%">
                                         <div class="box-thumb d-flex justify-content-center">
                                             @if($new->postThumb)
                                             <img src="{{asset('upload/'.$new->postThumb)}}" alt="Hachinet JSC" class="image-thumbnail" />
@@ -84,20 +84,20 @@
                                             @endif
                                         </div>
                                     </td>
-                                    <td class="title-posts">
+                                    <td width="40%" class="title-posts">
                                         @foreach ($new->postTitle as $p)
                                         {{$p}}<br />
                                         @endforeach
                                     </td>
-                                    <td>{{$new->createdAt ? date('Y-m-d', (int)$new->createdAt) : date('Y-m-d')}}</td>
-                                    <td>
+                                    <td width="10%">{{$new->createdAt ? date('Y-m-d', (int)$new->createdAt) : date('Y-m-d')}}</td>
+                                    <td width="14%">
                                         <div class="bt-switch d-flex justify-content-center">
                                         <input type="checkbox" {{$new->postStatus == 1 ? 'checked' : ''}} onchange="statusUpdate({{$new->postId}}, event)"
                                         id="switch{{$new->postId}}" class="status__update"/>
                                         <label for="switch{{$new->postId}}">Toggle</label>
                                         </div>
                                     </td>
-                                    <td>
+                                    <td width="6%" class="icon-center">
                                         <a href="{{route('news.edit', $new->postId)}}"><i class="ti-pencil-alt fa-2x"></i></a>
                                     </td>
                                 </tr>
