@@ -63,8 +63,3 @@
             </div>  
         </nav>
     <!-- Nav End -->
-    <div id="fb-root"></div>
-    <div class="fb-customerchat"
-    attribution=setup_tool
-    page_id="185234278694654"
-    theme_color="#ffB701"></div>
