@@ -47,7 +47,7 @@
         theme_color="#ffB701">
     </div>
     @if (Session::get('locale') == 'en')
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script>
+    {{-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script> --}}
     <!-- Load Facebook SDK for JavaScript -->
     <script>
         window.fbAsyncInit = function() {
@@ -66,7 +66,7 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
     @elseif (Session::get('locale') == 'jp')
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v6.0"></script>
+    {{-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v6.0"></script> --}}
     <script>
         window.fbAsyncInit = function() {
             FB.init({
@@ -84,7 +84,7 @@
         }(document, 'script', 'facebook-jssdk'));
     </script>
     @else
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script>
+    {{-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v6.0"></script> --}}
     <script>
         window.fbAsyncInit = function() {
             FB.init({
