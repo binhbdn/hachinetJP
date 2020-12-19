@@ -75,28 +75,12 @@
         style="visibility: visible; animation-duration: 0.7s; animation-delay: 0.8s; 
         animation-name: fadeInUp; line-height: 35px;">
             <!-- column start -->
-            <p class="mb-0 text-white">All rights reserved <a href="{{route('home')}}" class="template-color"><strong> HACHINET</strong></a> Copyright © 2018 - {{date('Y')}}</p>
+            <p class="mb-0 text-white">All rights reserved <a href="{{route('home')}}" class="template-color"><strong> HACHINET</strong></a> Copyright Â© 2018 - {{date('Y')}}</p>
         </div>
     </div>
     <!-- Load Facebook SDK for JavaScript -->
     <div id="fb-root"></div>
-    <script>
-        window.fbAsyncInit = function() {
-            FB.init({
-            xfbml            : true,
-            version          : 'v3.3'
-            });
-        };
-
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/ja_JP/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));</script>
-
-        <div class="fb-customerchat"
+    <div class="fb-customerchat"
         attribution=setup_tool
         page_id="185234278694654"
         theme_color="#ffB701">
