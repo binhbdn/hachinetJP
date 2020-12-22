@@ -21,10 +21,3 @@
 
     <!-- script js -->
     <script src="{{ asset('website/js/script.js') }}"></script>
-<!-- css tạm -->
-    <style>
-      #scrollUp{
-        margin-bottom: 20px;
-        margin-right: -50px;
-      }
-    </style>
